@@ -18,7 +18,7 @@ class UtilityService
 
     public function is200ResponseWithData($responseMessage, $data){
       throw new HttpResponseException(response()->json([
-        "sucess"=>true,
+        "success"=>true,
         "message"=>$responseMessage,
         "data"=>$data
       ],200));

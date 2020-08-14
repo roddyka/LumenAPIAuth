@@ -38,7 +38,7 @@ $router->group(['prefix'=>'admin'], function() use($router){
     $router->post('login','AdminController@login');
 
     //view profile
-    $router->post('view-profile','AdminController@viewProfile');
+    $router->get('view-profile','AdminController@viewProfile');
 
     //logout
     $router->get('logout','AdminController@logout');
@@ -50,13 +50,16 @@ $router->group(['prefix'=>'admin'], function() use($router){
 
 //user
 $router->group(['prefix'=>'user'], function() use($router){
+
+    
+
     //login
     $router->post('register','UserController@register');
     //register
     $router->post('login','UserController@login');
 
     //view profile
-    $router->post('view-profile','UserController@viewProfile');
+    $router->get('view-profile','UserController@viewProfile');
 
     //logout
     $router->get('logout','UserController@logout');
